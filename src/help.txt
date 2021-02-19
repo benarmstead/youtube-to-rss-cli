@@ -1,0 +1,33 @@
+-----------------------------------------------------------------
+Help
+-----------------------------------------------------------------
+   : If no flag is passed then you will be taken to the CLI menu.
+
+-h : This help screen.
+
+-u : Enter URL(s) to convert, can take as many URL's as you wish.
+
+-f : Enter filename which the URL's are stored in.
+     These must be in the specific format shown below.
+
+-----------------------------------------------------------------
+Examples
+-----------------------------------------------------------------
+-u example: 
+python3 main.py -u https://www.youtube.com/c/level1techs https://www.youtube.com/c/level1techs
+
+Returns: 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
+
+-f example: 
+python3 main.py -f urls.txt
+
+Contents of urls.txt:
+https://www.youtube.com/c/level1techs
+https://www.youtube.com/c/level1techs
+
+Returns:
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
+-----------------------------------------------------------------
