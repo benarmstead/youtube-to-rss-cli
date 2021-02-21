@@ -2,7 +2,7 @@
 
 Python program to convert a single or multiple youtube channel(s) URL to their respective RSS links.
 
-# Running
+# Installation
 
 `git clone https://github.com/benarmstead/youtube-to-rss-cli/`
 
