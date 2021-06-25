@@ -17,21 +17,21 @@ def main():
     if length > 1:
         flag = links[1]
 
-    #If no flag is passed, then ask them for a URL to convert
+    #If no flag is passed, then ask them for a URL to convert_link
     if length == 1:
         link = input("Enter channel url: ")
-        print(cv.convert(link))
+        print(cv.convert_link(link))
     
     #If help flag passed, print help
     elif flag == "-h":
         print_help()
 
-    #If flag is -u, and a URL is given, process URL(s) and convert them
+    #If flag is -u, and a URL is given, process URL(s) and convert_link them
     elif flag == "-u" and length > 2:
         links.pop(0)
         links.pop(0)
 
-        cv.mass_convert(links, length - 2) # -2 as we popped 2 from list above
+        cv.mass_convert_link(links, length - 2) # -2 as we popped 2 from list above
 
     #If flag is for a file, get URL(s) from the file
     elif flag == "-f" and length == 3:
@@ -45,7 +45,7 @@ def main():
                 links[i] = links[i][:-1]
             
             #Convert the links
-            cv.mass_convert(links, length)
+            cv.mass_convert_link(links, length)
 
         #If file not found then print so
         except FileNotFoundError:
